@@ -18,6 +18,7 @@ from django.urls import path
 from generator import views
 
 urlpatterns = [
-    path('', views.home), # when no extension is added i.e. homepage e.g. google.com
-    path('easter_egg', views.easter_egg), # when extension called "easter_egg" is added e.g. google.com/easter_egg
+    path('', views.home, name='home'), # when no extension is added i.e. homepage e.g. google.com
+    path('password/', views.password, name='password'), # when extension called "easter_egg" is added e.g. google.com/easter_egg
+    path('about', views.about, name='about')
 ]
