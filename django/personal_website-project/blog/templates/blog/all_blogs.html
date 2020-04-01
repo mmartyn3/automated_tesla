@@ -2,11 +2,10 @@
 
 <h1> Hi, this is my blog! </h1>
 
-{% for post in blog_post %}
+{% for blog in blog_post %}
 
-<h2>{{ post.title }}</h2>
-<h5>{{ post.date }}</h5>
-<p>{{ post.description }}</p>
-
+<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+<h5>{{ blog.date }}</h5>
+<p>{{ blog.description }}</p>
 
 {% endfor %}
