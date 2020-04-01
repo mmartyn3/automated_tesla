@@ -3,8 +3,13 @@
 <h1> Hi, this is my portfolio </h1>
 
 {% load static %}
-<a href="{% static  'portfolio/cv.pdf' %}">Resume</a>
-<img src="{% static 'portfolio/profile.jpg' %}" height=300 width=300>
+
+<a href="{% url 'blog:all_blogs' %}">Blog</a> 
+<br>
+<a href="{% static 'portfolio/cv.pdf' %}">Resume</a>
+<br>
+<img src="{% static 'portfolio/profile.jpg' %}" height=400 width=400>
+
 
 {% for project in projects %}
 

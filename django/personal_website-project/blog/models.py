@@ -7,3 +7,7 @@ class Blog(models.Model): # required to generate table in database
     description = models.TextField()
     image = models.ImageField(upload_to='blog/images/')
     date = models.DateField()
+
+    def __str__(self):
+        """return default name for admin page"""
+        return self.title + "---" + self.description[:50]
