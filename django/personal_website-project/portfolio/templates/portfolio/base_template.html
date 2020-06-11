@@ -1,56 +1,59 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+    <!-- load Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <!-- load font awesome icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="{% static 'portfolio/main.css' %}">
+    <title>Michael Martyn</title>
+    <link rel="icon" href="{% static 'portfolio/dna_icon.png' %}">
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!--Bootstrap navbar -->
+  <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Michael Martyn</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ml-auto">
+        <!-- Website pages -->
+          <li class="nav-item">
+            <a href="{% static 'portfolio/cv.pdf' %}" class="nav-link">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a href="https://www.linkedin.com/in/mrmartyn/" class="nav-link">LinkedIn</a>
           </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+          <li class="nav-item">
+            <a href="https://www.github.com/mmartyn3" class="nav-link">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<!-- enter page logic below -->
-{% block content %}{% endblock %}
+    <!-- enter page logic below -->
+    {% block content %}
+    {% endblock %}
 
+    <!-- Footer -->
+    <div class="col-sm-12 text-center">
+      <footer>
+        <a href="https://www.instagram.com/mmartyn3"><i class="fab fa-instagram" style="font-size:24px"></i></a>&nbsp
+        <a href="https://www.linkedin.com/in/mrmartyn/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>&nbsp
+        <a href="https://www.strava.com/athletes/7590584"><i class='fab fa-strava' style="font-size:24px"></i></a>&nbsp
+        <a href="https://www.github.com/mmartyn3"><i class="fab fa-github-alt" style="font-size:24px"></i></a>&nbsp
+        <a href="mailto:michael.martyn.92@gmail.com"><i class="far fa-envelope" style="font-size:24px"></i></a>
+
+        <p class="copyright">Made with Django <i class="fab fa-python fa-spin"></i> Michael Martyn © 2020 </p>
+      </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
