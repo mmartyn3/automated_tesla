@@ -1,8 +1,88 @@
 {% extends 'portfolio/base_template.html' %}
+{% load static %}
 
 {% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 align-self-center">
+        <img id="profile_picture" src="{% static 'portfolio/headshot.png' %}"
+          class="img-fluid" alt="headshot - Michael Martyn">
+      </div>
+      <div class="col-md-6 col-sm-12 align-self-center" style="top: 16px">
+        <div class="text-center">
+          <h1 style=font-size:80px>Michael Martyn</h1>
+        </div>
+        <!-- <div class="text-center">
+          <h4>Bioinformatics Engineer @ Zymergen</h4>
+        </div> -->
+        <div class="text-justify">
+          <p><span class="lead">Hi, I'm Michael</span> 👋 I enjoy tackling
+            complex biological problems with pipettes and programming. When I have
+            time, I enjoy exploring the SF Bay Area with
+            <a href="https://goldengaterunningclub.org">Golden Gate Running Club.</a>
+            and creating data visualisations of activity & sleep data from my Garmin
+            sports watch. I currently work in the San Francisco Bay Area at an awesome
+            Synthetic Biology company called <a href="https://www.zymergen.com/">Zymergen</a>
+            as a Associate Bioinformatics Engineer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <h1> Hi, this is my portfolio </h1>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h4>Professional Experience:</h4>
+          <ul class="timeline">
+            <li>
+              <a href="https://www.zymergen.com/">Zymergen, CA, USA</a>
+              <p class="float-right">Feb 2020 - present</p>
+              <p>Associate Bioinformatics Engineer</p>
+            </li>
+            <li>
+              <a href="https://www.zymergen.com/">Zymergen, CA, USA</a>
+              <p class="float-right">2017 - 2020</p>
+              <p>Research Associate I - III</p>
+            </li>
+            <li>
+              <a href="https://www.ncl.ac.uk/">Newcastle University, UK</a>
+              <p class="float-right">2015 - 2016</p>
+              <p>Research Assistant, Department of Computer Science</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h4>Education:</h4>
+          <ul class="timeline">
+            <li>
+              <a href="https://www.usf.com/">University of San Francisco, USA</a>
+              <p class="float-right">2018 - 2018</p>
+              <p>Intro to Machine Learning, Graduate certificate</p>
+            </li>
+                        <li>
+                            <a href="https://www.ncl.ac.uk/">Newcastle University, UK</a>
+                            <p class="float-right">2015 - 2016</p>
+                            <p>Synthetic Biology, MSc</p>
+                        </li>
+                        <li>
+                            <a href="https://www.ncl.ac.uk/">Newcastle University, UK</a>
+                            <p class="float-right">2012 - 2015</p>
+                            <p>Cellular and Molecular Biology, BSc</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <!-- <h1> Hi, this is my portfolio </h1>
 
     {% load static %}
 
@@ -21,6 +101,6 @@
     <br><a href="{{ project.url}}">Link_to_pic</a>
     {% endif %}
 
-    {% endfor %}
+    {% endfor %} -->
 
 {% endblock %}
