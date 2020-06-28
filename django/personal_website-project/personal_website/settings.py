@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'keep_secret!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.mmartyn.com']
+ALLOWED_HOSTS = ['localhost','www.mmartyn.com']
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 
 # line below required to have static images under static/ folder
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # save all images to media folder

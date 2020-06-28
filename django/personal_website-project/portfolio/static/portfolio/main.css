@@ -11,7 +11,7 @@
 /* Ensures content is not hidden behind navbar */
 body {
   font-size: 1.5em;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .big-title{
@@ -38,9 +38,6 @@ body {
 img {
   vertical-align: bottom; }
 
-p {
-  margin-top: 20px; }
-
 /* SCSS nesting */
 div p a {
   border-bottom: 3px solid #B0E0E6;
@@ -50,6 +47,11 @@ div p a {
 #profile_picture {
   border: 2.5px solid black;
   width: 75%;
+  display: block; }
+
+#header_picture {
+  width: 100%;
+  margin-bottom: 50px;
   display: block; }
 
 /* publications.html -------------------------------------------------------- */
@@ -112,3 +114,35 @@ p.float-right {
   left: 50px; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  /* background-color: #eee; */
+  color: #grey;
+  cursor: pointer;
+  /* padding: 18px; */
+  padding-bottom: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.7em;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, .collapsible:hover {
+  background-color: #ccc;
+} */
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  /* background-color: #f1f1f1; */
+}
+
+.lead{
+  font-size: 1.2em;
+}
